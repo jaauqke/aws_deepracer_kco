@@ -13,6 +13,7 @@ import math
     _, next_object_index = params['closest_objects']
     objects_left_of_center = params['objects_left_of_center']
     is_left_of_center = params['is_left_of_center']
+    heading = params['heading']
 
     # Initialize reward with a small number but not zero
     # because zero means off-track or crashed
@@ -39,6 +40,9 @@ import math
             reward_avoid *= 0.2
         elif distance_closest_object < 0.3:
             reward_avoid = 1e-3 # Likely crashed
+
+    # Emphasize speed if heading similar to upcoming waypoints
+     #check to see if heading is between the calculated degrees between agent and next waypoints
 
     # Calculate reward by putting different weights on
     # the two aspects above
