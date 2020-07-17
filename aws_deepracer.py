@@ -3,6 +3,7 @@ def reward_function(params):
     Example of rewarding the agent to stay inside two borders
     and penalizing getting too close to the objects in front
     '''
+    #import math 
 
     all_wheels_on_track = params['all_wheels_on_track']
     distance_from_center = params['distance_from_center']
