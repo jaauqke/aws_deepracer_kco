@@ -22,7 +22,7 @@ import math
     if all_wheels_on_track and (0.5 * track_width - distance_from_center) >= 0.05:
         reward_lane = 1.0
     else:
-        reward_lane = 1e-4
+        reward_lane = 1e-5
 
     # Penalize if the agent is too close to the next object
     reward_avoid = 1.0
