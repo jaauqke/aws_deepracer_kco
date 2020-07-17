@@ -17,7 +17,7 @@ import math
 
     # Initialize reward with a small number but not zero
     # because zero means off-track or crashed
-    reward = 1e-4
+    reward = 1e-5
 
     # Reward if the agent stays inside the two borders of the track
     if all_wheels_on_track and (0.5 * track_width - distance_from_center) >= 0.05:
